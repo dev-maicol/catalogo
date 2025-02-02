@@ -1,0 +1,29 @@
+<!-- <app-product-card productSelec="{{productSelec}}"/> -->
+<mat-card *ngFor="let product of listProductsService" class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <span class="id-product">
+        {{ product.id}}
+      </span>
+    </div>
+    <mat-card-title>{{ product.title}}</mat-card-title>
+    <mat-card-subtitle>{{ product.gender}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{ product.urlImg}}" alt="{{ product.description}}">
+  <mat-card-content>
+    <p>
+      {{ product.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="addProductCar(product)">Add Car</button>
+    <button mat-button (click)="seleccionar(product)">Details</button>
+    <!-- <button mat-button (click)="seleccionar(product.title)">Selec</button> -->
+  </mat-card-actions>
+</mat-card>
+<!-- <h2>Seleccionado: {{productSelec}}</h2> -->
+<!-- <app-product-card productSelec="{{productSelec}}" /> -->
+@if (productSelec) {
+<app-product-card [productSelec]="productSelec" />
+
+}

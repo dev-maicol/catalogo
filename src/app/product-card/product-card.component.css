@@ -1,0 +1,29 @@
+.example-card {
+  width: 300px;
+  margin-bottom: 1rem;
+  border-color: #09f;
+}
+
+.example-header-image {
+  background-image: url('https://assets.redbullshop.com/q_auto/t_subshop-select/content/RB%20SHOP%20BANNERS/Navigation%20Logos/nav_red_bull_batalla_de_los_gallos_negv4.png');
+  background-size: cover;
+}
+.id-product{
+  color: white;
+  background: #09f;
+  border-radius: 25%;
+  font-size: 1.5rem;
+}
+h2{
+  margin-top: 0;
+  color: rgb(239, 239, 239);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.container{
+  background: #09f;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border-radius: 4%;
+}

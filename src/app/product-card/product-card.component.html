@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>&nbsp; Detalles del producto individual &nbsp;</h2>
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image">
+        <span class="id-product">
+          {{ productSelec?.id}}
+        </span>
+      </div>
+  
+      <mat-card-title>
+        {{ productSelec?.title}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ productSelec?.gender}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ productSelec?.urlImg}}" alt="{{ productSelec?.description}}">
+    <mat-card-content>
+      <p>{{ productSelec?.description}}</p>
+      <p>
+        {{ productSelec?.price}} $
+        @if (productSelec?.state) {
+        <mat-chip>
+          <mat-icon style="color: #09f;" matChipAvatar aria-hidden="false" aria-label="Example home icon"
+            fontIcon="check"></mat-icon>
+          <span style="color: #09f;">Available</span>
+        </mat-chip>
+        }@else {
+        <mat-chip>
+          <mat-icon style="color: red;" matChipAvatar aria-hidden="false" aria-label="Example home icon"
+            fontIcon="close"></mat-icon>
+          <span style="color: red;">Not available</span>
+        </mat-chip>
+        }
+  
+      </p>
+  
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <button mat-button>Add Car</button>
+        <button mat-button>Details</button> -->
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+<!-- <p>Detalles del producto individual:</p> -->

@@ -1,0 +1,24 @@
+:root {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+/* section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: ;
+} */
+.list-products{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  /* align-items: center; */
+  justify-content: space-around;
+}
