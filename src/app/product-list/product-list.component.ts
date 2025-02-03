@@ -34,12 +34,12 @@ export class ProductListComponent {
   loadProducts() {
     this.listProductsService = this.productService.getProductsService();
     
-    console.log('\nRespuesta del servicio')
+    // console.log('\nRespuesta del servicio')
     
-    for(let product of this.listProductsService){
-      console.log(product)
+    // for(let product of this.listProductsService){
+    //   console.log(product)
       
-    }
+    // }
   }
   getProductById(id:number): Product | undefined{
     return this.productService.getProductByIdService(id)

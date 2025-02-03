@@ -1,20 +1,20 @@
 <header>
-  <h1>Tienda de Ropa Online</h1>
-  <span>Products Car:
-     {{ getProductsCar()}}
-     <mat-icon style="color: #09f;" aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
-
+  <h1>
+    Tienda de Ropa Online
+    <span>Products Car:
+      {{ getProductsCar()}}
+      <mat-icon style="color: #09f;" aria-hidden="false" aria-label="Example home icon"
+        fontIcon="shopping_cart"></mat-icon>
     </span>
-     
+  </h1>
+  <app-searcher-form></app-searcher-form>
+
 </header>
 <section>
   <!-- <div *ngFor="let item of items">
     <app-product-list/>
   </div> -->
-  <app-product-list 
-  class="list-products"
-  (addCarProducts)="getProductAdd()"
-  />
+  <app-product-list class="list-products" (addCarProducts)="getProductAdd()" />
 </section>
 
 <!-- <router-outlet /> -->

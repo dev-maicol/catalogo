@@ -1,0 +1,38 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+  <!-- <input type="text" formControlName="searchTerm" placeholder="Introduce tu búsqueda" /> -->
+  <mat-form-field class="example-form-field">
+    <mat-label>Search.....</mat-label>
+    <input matInput type="text" 
+    formControlName="searchTerm" 
+    placeholder="Introduce tu búsqueda">
+    <!-- @if (valueSearch) {
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+      <mat-icon>close</mat-icon>
+    </button>
+    } -->
+  </mat-form-field>
+  <button 
+  type="submit" 
+  [disabled]="searchForm.invalid" 
+  mat-raised-button
+  >Search</button>
+</form>
+
+<!-- <h2 mat-dialog-title>Favorite Animal</h2> -->
+<!-- <mat-dialog-content>
+  My favorite animal is:
+  <ul>
+    <li>
+      Panda
+    </li>
+    <li>
+      Unicorn
+    </li>
+    <li>
+      Lion
+    </li>
+  </ul>
+</mat-dialog-content> -->
+
+
+<!-- <button mat-raised-button>Search</button> -->

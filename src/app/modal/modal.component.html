@@ -1,0 +1,16 @@
+@if (data.products.length > 0){
+<h2 mat-dialog-title>Leaked products</h2>
+<mat-dialog-content>
+  <ul>
+    <li *ngFor="let p of data.products">
+      {{ p.title}} -> {{ p.price}}
+    </li>
+  </ul>
+</mat-dialog-content>
+}@else {
+<h2 mat-dialog-title>Products not found ☹</h2>
+<mat-dialog-content>
+  
+</mat-dialog-content>
+
+}

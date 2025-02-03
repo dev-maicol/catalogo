@@ -6,5 +6,6 @@ export interface Product {
   description: string
   state: boolean
   price?: number
+  category?: string
 }
 

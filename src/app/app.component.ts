@@ -5,12 +5,14 @@ import { NgFor } from '@angular/common';
 
 import {MatIconModule} from '@angular/material/icon';
 
+import { SearcherFormComponent } from './searcher-form/searcher-form.component';
+
 
 import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductListComponent, MatIconModule],
+  imports: [RouterOutlet, ProductListComponent, MatIconModule, SearcherFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
