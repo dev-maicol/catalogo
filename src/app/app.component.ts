@@ -23,14 +23,19 @@ export class AppComponent {
   constructor(private productService: ProductService) {}
 
   carProducts = 0
+
   ngOnInit(){
     this.carProducts = this.productService.productsCar.length
   }
   getProductAdd(){
     this.carProducts++
+    
   }
   getProductsCar(): number{
     this.totalProductCar = this.productService.productsCar.length
+
+    
+
     return this.totalProductCar
   }
 }

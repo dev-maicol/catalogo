@@ -15,11 +15,12 @@ import {
   MatDialogContent,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-product-list',
-  imports: [MatCardModule, MatButtonModule, NgFor, ProductCardComponent],
+  imports: [MatCardModule, MatButtonModule, NgFor],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
@@ -29,7 +30,7 @@ export class ProductListComponent {
 
   listProductsService: Product[] = []
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   loadProducts() {
     this.listProductsService = this.productService.getProductsService();
@@ -41,9 +42,9 @@ export class ProductListComponent {
       
     // }
   }
-  getProductById(id:number): Product | undefined{
-    return this.productService.getProductByIdService(id)
-  }
+  // getProductById(id:number): Product | undefined{
+  //   return this.productService.getProductByIdService(id)
+  // }
 
   ngOnInit(){
     this.loadProducts()
@@ -144,9 +145,10 @@ export class ProductListComponent {
   productSelec: Product | undefined
   
 
-  seleccionar(product: Product)
+  seleccionar(id: Number)
   {
-    this.productSelec = product
+    // this.productSelec = product
+    this.router.navigate(['/product', id])
   }
 
 }

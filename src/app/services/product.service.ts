@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -132,8 +133,8 @@ export class ProductService {
     this.products = [];
   }
 
-  getProductByIdService(id: number): Product | undefined{
-    return this.products.find((product) => product.id === id)
+  getProductByIdService(id: number): Observable<Product | undefined>{
+    return of(this.products.find((product) => product.id === id))
   }
 
 }

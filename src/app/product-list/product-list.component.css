@@ -1,3 +1,8 @@
+/* .contenedor{
+  display: flex;
+  
+} */
+
 mat-card {
   width: 250px;
   height: min-content;
