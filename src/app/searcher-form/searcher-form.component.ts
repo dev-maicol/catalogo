@@ -64,7 +64,6 @@ export class SearcherFormComponent {
   onSearch() {
     if (this.searchForm.valid) {
       const searchValue = this.searchForm.value.searchTerm;
-      // console.log('Buscando por:', searchValue);
       this.filterProducts(searchValue)
 
       this.dialog.open(ModalComponent, {
@@ -72,7 +71,6 @@ export class SearcherFormComponent {
           products: this.productsFiltered
         },
       });
-      // Aquí puedes llamar a tu servicio o realizar lo que necesites con el valor de búsqueda
     }
   }
 
